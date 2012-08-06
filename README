@@ -1,0 +1,9 @@
+This is another script I use with Jenkins. I run groups of Varnish, Nginx, and MySQL servers
+that have configurations that depend on one another. Rather than have Jenkins tell those
+servers to check in with the Puppet Master individually, I feed it a list of hostnames and
+take advantage of Fabric's parallel execution to have them all update at once.
+
+Of course, you can run it manually from the command line.
+
+Be sure to change the user in the fabfile and the fabfile location in the shell script to
+what you need.

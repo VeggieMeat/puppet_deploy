@@ -16,4 +16,4 @@ while read LINE
   done
 
 HOSTLIST=$(echo $HOSTS | awk '{print substr($0,2)}')
-fab -f $FABFILE -H $HOSTLIST backup:master=$MASTER || exit 1
+fab -f $FABFILE -H $HOSTLIST puppet:master=$MASTER || exit 1
